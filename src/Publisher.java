@@ -75,12 +75,13 @@ public class Publisher {
             //stdIn.close();
             //System.exit(0);
             
-        } catch(MqttException me) {
-            System.out.println("ragione disconnessisone " + me.getReasonCode());
-            System.out.println("messaggio " + me.getMessage());
-            System.out.println("locale " + me.getLocalizedMessage());
-            System.out.println("causa " + me.getCause());
-            System.out.println("eccezione "+ me);
+        } 
+        catch(MqttException me) {
+            System.out.println("Ragione disconnessisone: " + me.getReasonCode());
+            System.out.println("Messaggio: " + me.getMessage());
+            System.out.println("Locale: " + me.getLocalizedMessage());
+            System.out.println("Causa: " + me.getCause());
+            System.out.println("Eccezione: "+ me);
             me.printStackTrace();
         }
         
@@ -90,3 +91,5 @@ public class Publisher {
         System.out.println("Publisher-> Arresto completato");
     }
 }
+
+// Publisher

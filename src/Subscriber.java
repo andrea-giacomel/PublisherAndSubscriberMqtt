@@ -55,15 +55,15 @@ public class Subscriber {
 			});		
             
 		}	
-		catch (MqttException me){
-			System.out.println("ragione disconnessione " + me.getReasonCode());
-            System.out.println("messaggio " + me.getMessage());
-            System.out.println("locale " + me.getLocalizedMessage());
-            System.out.println("causa " + me.getCause());
-            System.out.println("eccezione " + me);
-			me.printStackTrace();	
-			}			
+		catch(MqttException me) {
+            System.out.println("Ragione disconnessisone: " + me.getReasonCode());
+            System.out.println("Messaggio: " + me.getMessage());
+            System.out.println("Locale: " + me.getLocalizedMessage());
+            System.out.println("Causa: " + me.getCause());
+            System.out.println("Eccezione: "+ me);
+            me.printStackTrace();
+        }			
 	}
 }	
 
-//Subscriber
+// Subscriber
